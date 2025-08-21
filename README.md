@@ -1,2 +1,2 @@
-# Dise-oDeSoftware
+# DisenoDeSoftware
 Infografía sobre el Diseño de Software
