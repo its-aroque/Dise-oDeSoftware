@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Diseño de Software</title>
+    <style>
+        /* Variables y reset */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Tarjetas */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* Grid system */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+        
+        /* Listas */
+        .practice-list {
+            list-style-type: none;
+        }
+        
+        .practice-list li {
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            background-color: var(--light-color);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 0 4px 4px 0;
+            transition: var(--transition);
+        }
+        
+        .practice-list li:hover {
+            background-color: #dfe6e9;
+            transform: translateX(5px);
+        }
+        
+        /* Secciones especiales */
+        .highlight {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .principle {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .principle h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Referencias */
+        .references {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Utilidades */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+        
+        .color-primary {
+            color: var(--primary-color);
+        }
+        
+        .color-accent {
+            color: var(--accent-color);
+        }
+        
+        /* Iconos */
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Diseño de Software</h1>
+            <p class="subtitle">Mejores prácticas y principios fundamentales</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="card">
+            <h2 class="card-title">¿Qué es el Diseño de Software?</h2>
+            <p>El diseño de software es un proceso fundamental en el desarrollo de soluciones informáticas que permite materializar los requerimientos del cliente y establecer la calidad del proyecto.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3 class="card-title">Definición</h3>
+                    <p>Proceso mediante el cual un agente crea una especificación de un artefacto de software para cumplir objetivos, utilizando componentes primitivos y sujeto a restricciones.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Alcance</h3>
+                    <p>Actividad implicada en conceptualizar, enmarcar, implementar, poner en funcionamiento y modificar sistemas complejos.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Ubicación en el ciclo</h3>
+                    <p>Actividad que sigue a la especificación de requisitos y precede a la programación en un proceso de ingeniería de software.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2 class="card-title">Principios Generales de Diseño</h2>
+            <ul class="practice-list">
+                <li><strong>Considerar enfoques alternativos:</strong> Evaluar diversas soluciones basadas en requisitos y recursos.</li>
+                <li><strong>Trazabilidad al modelo de análisis:</strong> Asegurar que cada elemento del diseño pueda rastrearse hasta los requisitos.</li>
+                <li><strong>No reinventar la rueda:</strong> Utilizar patrones de diseño existentes para agilizar el desarrollo.</li>
+                <li><strong>Minimizar la "distancia intelectual":</strong> La estructura del diseño debe imitar la estructura del dominio del problema.</li>
+                <li><strong>Uniformidad e integración:</strong> Definir reglas de estilo consistentes y interfaces bien definidas.</li>
+                <li><strong>Estructurado para adaptarse al cambio:</strong> Permitir la evolución del software evitando reescrituras costosas.</li>
+                <li><strong>Degradación suave:</strong> El software debe operar bajo estrés y terminar de forma elegante si es necesario.</li>
+                <li><strong>Evaluación continua de la calidad:</strong> Evaluar la calidad durante la creación, no después.</li>
+                <li><strong>Revisión para minimizar errores conceptuales:</strong> Enfocarse en solucionar omisiones, ambigüedades e incongruencias.</li>
+            </ul>
+        </section>
+        
+        <section class="card">
+            <h2 class="card-title">Conceptos Fundamentales de Diseño</h2>
+            <div class="principle-grid">
+                <div class="principle">
+                    <h4>Abstracción</h4>
+                    <p>Representar características esenciales sin incluir detalles de fondo.</p>
+                </div>
+                
+                <div class="principle">
+                    <h4>Refinamiento</h4>
+                    <p>Descomponer funciones macroscópicas en instrucciones más detalladas.</p>
+                </div>
+                
+                <div class="principle">
+                    <h4>Modularidad</h4>
+                    <p>Dividir el software en componentes independientes y bien definidos.</p>
+                </div>
+                
+                <div class="principle">
+                    <h4>Ocultamiento de Información</h4>
+                    <p>Diseñar módulos para que la información interna sea inaccesible para otros módulos que no la necesiten.</p>
+                </div>
+                
+                <div class="principle">
+                    <h4>Jerarquía</h4>
+                    <p>Organizar el control y el trabajo de arriba hacia abajo en la estructura del programa.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="highlight">
+            <h2 class="text-center">Principios SOLID para Diseño Orientado a Objetos</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3 class="card-title">SRP</h3>
+                    <p><strong>Principio de Responsabilidad Única:</strong> Una clase o módulo debe tener solo una razón para cambiar.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">OCP</h3>
+                    <p><strong>Principio Abierto/Cerrado:</strong> Las clases deben estar abiertas a la extensión, pero cerradas a la modificación.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">LSP</h3>
+                    <p><strong>Principio de Sustitución de Liskov:</strong> Las subclases deben ser sustituibles por sus clases base sin producir resultados extraños.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">ISP</h3>
+                    <p><strong>Principio de Segregación de Interfaces:</strong> Es preferible tener muchas interfaces específicas que una interfaz de propósito general.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">DIP</h3>
+                    <p><strong>Principio de Inversión de Dependencias:</strong> Las clases deben depender de interfaces o clases abstractas, no de implementaciones concretas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2 class="card-title">Prácticas para Código Limpio y Arquitectura Escalable</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3 class="card-title">Código legible</h3>
+                    <p>Dedicar tiempo a que el código se entienda fácilmente, como si fuera prosa bien escrita.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Nombres significativos</h3>
+                    <p>Usar nombres que revelen la intención, pronunciables, buscables y que eviten la desinformación.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Funciones pequeñas</h3>
+                    <p>Las funciones deben ser reducidas y realizar "una sola cosa" a un único nivel de abstracción.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Manejo de errores</h3>
+                    <p>Utilizar excepciones en lugar de códigos de retorno. El procesamiento de errores debe ser separado de la lógica principal.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Evitar duplicación (DRY)</h3>
+                    <p>Los duplicados son indicadores de oportunidades de abstracción fallidas.</p>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Pruebas de unidad</h3>
+                    <p>El código de prueba es tan importante como el de producción. Debe seguir principios F.I.R.S.T.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="references card">
+            <h2 class="card-title">Referencias IEEE</h2>
+            <p>La Wikipedia sobre "Diseño de software" menciona IEEE 1016 como estándar para las descripciones de diseño de software.</p>
+            <p class="mb-2">Además, se cita a <strong>Davis, A.: "201 Principios de Desarrollo de Software", McGraw Hill, 1995</strong> como fuente de principios de diseño de software.</p>
+        </section>
+    </div>
+</body>
+</html>
